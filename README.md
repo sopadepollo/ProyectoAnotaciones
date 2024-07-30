@@ -4,7 +4,7 @@ Proyecto web que usa node, mongodb para una herramienta de bloc de notas, album 
 
 
 Librerias necesarias: 
-	Express - Para crear el servidor y gestionar rutas.
+	Express - Para crear el servidor y gestionar rutas./n
 	Mongoose - interactuar con MongoDB y gestionar esquemas de datos.
 	dotenv carga variables de entorno desde un archivo .env.
 	bcryptjs - encripta contraseñas y comparar hashes.
