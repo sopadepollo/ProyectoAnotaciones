@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis notas</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <!--pagina principal, encargada de mostrar las tres dfunciones divididas en tres partes-->
+    
+    <!-- Sección de Notas -->
+    <div class="contenedorA">
+        <h1>Bienvenido, <%= user.username %></h1>
+        <h1><img src="/public/images/9771806.png" alt="Icono">Notas</h1>
+        <button class="crearbtn"><img src="/public/images/editar.png" alt="Editar">Crea una nueva anotación</button>
+        <div class="note-count">Número de notas: <%= notes.length %></div>
+        <div class="contenedorNotas">
+            <% notes.forEach(note => { %>
+                <div class="inputbox" data-note-id="<%= note._id %>">
+                    <div class="titulo" contenteditable="true"><%= note.title %></div>
+                    <div class="contenido" contenteditable="true"><%= note.content %></div>
+                    <div class="fecha">Creada el: <%= new Date(note.createdAt).toLocaleString() %></div>
+                    <img id="borrar" class="borrar" src="/public/images/borrar.png" alt="Borrar">
+                    <img id="guardar" class="guardar" src="/public/images/guardar.png" alt="Guardar">
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <!-- Sección de Imágenes -->
+    <div class="contenedorC">
+        <h2><img src="/public/images/upload.png" alt="Subir">Álbum de fotos</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*">
+            <button type="submit">Subir</button>
+        </form>
+        <div class="contenedorImagenes">
+            <% images.forEach(image => { %>
+                <div class="imagen">
+                    <img src="<%= image.url %>" alt="Imagen subida">
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <!-- Sección de Clima -->
+    <div class="contenedorB">
+        <div id="clima">
+            <div class="fila">
+                <img src="/public/images/calendario.png" alt="Calendario">
+                <p id="dia"></p>
+                <p id="mes"></p>
+            </div>
+            <p id="anio"></p>
+        </div>
+        <div id="clima2">
+            <p id="lugar"></p>
+            <img src="/public/images/6858977.png" alt="Clima">
+            <p id="descripcion"></p>
+            <p id="temperatura"></p>
+        </div>
+    </div>
+
+    <script src="/public/js/clima.js"></script>
+    <script src="/public/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background: #79a1df;
+}
+
+
+.contenedor {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedorA {
+    flex: 2; 
+    padding: 4% 10%;
+    color: #fff;
+    min-height: 100vh; 
+    overflow-y: auto; /* */
+}
+
+.contenedorA h1 {
+    font-size: 35px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.contenedorA h1 img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.contenedorA button {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+}
+
+.contenedorA button img {
+    width: 25px;
+    margin-right: 8px;
+}
+
+.inputbox {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 5px 0;
+    outline: none;
+    border-radius: 5px;
+}
+
+.borrar {
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.fecha {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 0.8em;
+    color: gray;
+    margin-top: 5px;
+    pointer-events: none;
+}
+
+.titulo {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    outline: none;
+    border-bottom: 2px solid rgb(146, 146, 146);
+}
+
+.contenido {
+    margin-top: 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 1em;
+    white-space: pre-wrap;
+    outline: none;
+}
+
+.note-count {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.contenedorB {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+#clima {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#clima .fila {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#clima .fila img {
+    max-width: 60px;
+}
+
+#clima #dia {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+#clima #mes {
+    font-size: 60px;
+}
+#clima #anio {
+    font-size: 0.8em;
+    margin-left: 10px; 
+    margin-top: -10px; 
+}
+
+
+
+#clima #lugar, #clima #descripcion, #clima #temperatura {
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+#clima2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#clima2 #lugar {
+    font-size: 30px;
+    font-weight: bolder;
+}
+#clima2 img {
+    max-width: 400px;
+}
+
+
+
+
+.contenedorC {
+    padding:30px;
+    flex:3;
+
+    overflow-y: auto; /*scroll si contenido muy largo*/
+    background-color: #b8b7b7;
+    max-width: 100%; /* mueve el ancho máximo del contenedor a tamaño de su contenedor padre */
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    box-sizing: border-box; /* esto asegura que el borde y el relleno se incluyan en el tamaño total */
+}
+
+.contenedorImagenes {
+    display: flex;
+    flex-wrap: wrap; /*imagen en filas */
+}
+
+.imagen {
+    margin: 10px; 
+}
+.imagen img {
+    max-width: 100%; 
+    height: auto; /* queda la proporción de la imagen como es*/
+}
+
+
+.guardar {
+    width: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.crearbtn{
+    background-color: #1194eb;
+}
+.crearbtn:hover{
+    background-color: #129ffd;
+    transition: 500ms;
+}
+
+#borrar, #guardar {
+    transition: transform 500ms;
+}
+
+#borrar:hover, #guardar:hover {
+    transform: scale(1.2);
+}

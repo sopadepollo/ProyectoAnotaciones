@@ -1,0 +1,14 @@
+{
+    "name": "ale/anotaciones",
+    "description": "proyecto cloudinary anotaciones",
+    "type": "project",
+    "license": "no",
+    "authors": [
+        {
+            "name": "Ale",
+            "email": "aa5974076@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
